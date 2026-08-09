@@ -106,7 +106,7 @@ function Login({setPropsInfoPopup}) {
                     value={senhaInput}
                     autoComplete="current-password"
                     />
-                    <button className="eye-btn" onClick={() => setIsMostrarSenha((prevIsMostrarSenha) => !prevIsMostrarSenha)}>
+                    <button className="eye-btn" type="button" onClick={() => setIsMostrarSenha((prevIsMostrarSenha) => !prevIsMostrarSenha)}>
                         {isMostrarSenha ? "🙈" : "👁"} 
                     </button>
                     </div>

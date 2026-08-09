@@ -3,6 +3,7 @@ using Gestao_Financeira.Exceptions;
 using Gestao_Financeira.Models.Dtos.UserDTOs;
 using Gestao_Financeira.Models.Entities;
 using Gestao_Financeira.Repositories.UserRepository;
+using Gestao_Financeira.Models.Enuns;
 
 namespace Gestao_Financeira.Services.UserService
 {
@@ -114,6 +115,15 @@ namespace Gestao_Financeira.Services.UserService
                 var novaSenhaHash = BCrypt.Net.BCrypt.HashPassword(userUpdateRequest.Senha);
                 user.AlterarSenhaHash(novaSenhaHash);
             }
+
+            _userRepository.Save();
+        }
+
+        public void UpdateUserRole(string id)
+        {
+            var user = GetByIdOrElseThrowNotFoundException(id);
+
+            user.AlterarUserRole(UserRole.ADMIN);
 
             _userRepository.Save();
         }

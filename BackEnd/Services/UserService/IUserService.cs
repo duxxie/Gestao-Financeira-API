@@ -10,6 +10,7 @@ namespace Gestao_Financeira.Services.UserService
         void ExistsById(string id);
         UserResponseDto Add(UserCreateRequest userCreateRequest);
         void Update(UserUpdateRequest userUpdateRequest, string id);
+        void UpdateUserRole(string id);
         void Delete(string id);
     }
 }

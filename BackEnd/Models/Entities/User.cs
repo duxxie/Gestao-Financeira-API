@@ -28,6 +28,11 @@ namespace Gestao_Financeira.Models.Entities
             Email = novoEmail;
         }
 
+        public void AlterarUserRole(UserRole userRole)
+        {
+            UserRole = userRole;
+        }
+
         public void AlterarSenhaHash(string novaSenhaHash)
         {
             SenhaHash = BCrypt.Net.BCrypt.HashPassword(novaSenhaHash);

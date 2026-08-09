@@ -122,7 +122,6 @@ function Categorias({setPropsInfoPopup}) {
         }
 
         fecharModalDeletarCategoria()
-        
     }
 
     function abrirModalDeletarCategoria() {

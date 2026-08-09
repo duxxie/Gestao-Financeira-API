@@ -231,6 +231,10 @@ body {
   transition: transform 0.15s, box-shadow 0.2s, opacity 0.2s;
   white-space: nowrap;
 }
+.btn-primary.danger{
+  background: var(--despesa-dim); 
+  color: var(--despesa);
+}
 .btn-primary:hover {
   transform: translateY(-1px);
   box-shadow: 0 6px 24px var(--accent-glow);
@@ -340,6 +344,7 @@ body {
 .sb-user {
   display: flex; align-items: center; gap: 10px;
   margin-bottom: 0;
+  cursor: pointer;
 }
 .sb-avatar {
   width: 34px; height: 34px;
@@ -407,7 +412,11 @@ body {
   letter-spacing: -0.5px;
   line-height: 1.1;
 }
-.page-sub { color: var(--text-2); font-size: 13px; margin-top: 4px; }
+.page-sub { 
+  color: var(--text-2); 
+  font-size: 13px; 
+  margin-top: 4px; 
+}
 
 /* ──────────────────────────────────────────────
    DASHBOARD
@@ -1039,6 +1048,13 @@ body {
 .conta-card-delta-badge.neutro{
   background:var(--accent-dim);
   color:var(--accent)
+}
+
+.admin-actions { 
+  display: flex; 
+  justify-content: 
+  flex-end; 
+  gap: 8px; 
 }
 
 .admin-summary {

@@ -24,7 +24,7 @@ function App() {
       <Route path='/login' element={<Login setPropsInfoPopup={setPropsInfoPopup}/>} />
       <Route path='/cadastro' element={<Cadastro setPropsInfoPopup={setPropsInfoPopup}/>}/>
 
-      <Route element={<PrivateRoute />}>
+      <Route element={<PrivateRoute setPropsInfoPopup={setPropsInfoPopup}/>}>
         <Route path='/' element={<Navigate to="/dashboard" replace />}/>
         <Route path='/dashboard' element={<DashBoard />}/>
         <Route path='/contas' element={<Contas setPropsInfoPopup={setPropsInfoPopup}/>}/>

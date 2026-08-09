@@ -86,7 +86,7 @@ namespace Gestao_Financeira.Controllers
 
                 _userService.Update(userUpdateRequest, userId);
                 
-                return Ok(); 
+                return NoContent(); 
             });
         }
 

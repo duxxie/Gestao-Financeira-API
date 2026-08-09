@@ -1,5 +1,6 @@
 using System.Security.Claims;
 using Gestao_Financeira.Exceptions;
+using Gestao_Financeira.Models.Dtos.UserDTOs;
 using Gestao_Financeira.Services.DashboardService;
 using Gestao_Financeira.Services.UserService;
 using Microsoft.AspNetCore.Authorization;
@@ -63,8 +64,19 @@ namespace Gestao_Financeira.Controllers.Admin
             return ExecutarComTratamentoDeException(() =>
                 {
                     _userService.Delete(id);
-                    return Ok("Removido com sucesso");
+                    return NoContent();
                 });
+        }
+
+        [Authorize (Roles = "ADMIN")]
+        [HttpPatch("{id}")]
+        public IActionResult UpdateUserRole(string id)
+        {
+            return ExecutarComTratamentoDeException(() =>
+            {
+                _userService.UpdateUserRole(id);
+                return NoContent();
+            });
         }
 
         private IActionResult ExecutarComTratamentoDeException(Func<IActionResult> acao)
