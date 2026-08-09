@@ -31,11 +31,8 @@ cd Gestao-Financeira-API
 
 O projeto está dividido em duas partes independentes. Clique nos links abaixo para acessar as instruções detalhadas de como configurar e rodar cada ambiente:
 
-* ⚙️ [**Backend (API)**](./backEnd/README.md) - Desenvolvido em C# com .NET e SQLite.
-* 🖥️ [**Frontend (Web)**](./frontEnd/README.md) - Interface do usuário desenvolvida em React.
-
-
-
+* ⚙️ [**Backend (API)**](./BackEnd/README.md) - Desenvolvido em C# com .NET e SQLite.
+* 🖥️ [**Frontend (Web)**](./FrontEnd/README.md) - Interface do usuário desenvolvida em React.
 
 # Gestão Financeira API
 

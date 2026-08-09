@@ -28,21 +28,21 @@ A API estará disponível em `http://localhost:8080`.
 
 Esta API é protegida por **JSON Web Tokens (JWT)**. 
 
-> **⚠️ IMPORTANTE:** Com exceção das rotas de cadastro (`POST /user`) e autenticação (`POST /login`), **todas as outras rotas da aplicação exigem autenticação.**
+> **⚠️ IMPORTANTE:** Com exceção das rotas de cadastro (`POST api/users`) e autenticação (`POST api/auth/login`), **todas as outras rotas da aplicação exigem autenticação.**
 
 ### 🧪 Credenciais de Teste (Banco Populado)
-Para facilitar os seus testes, o arquivo do banco de dados SQLite já está incluso no repositório com dados pré-cadastrados. Você pode usar as credenciais abaixo na rota `POST /login` para gerar um token imediatamente, sem precisar criar uma conta do zero:
+Para facilitar os seus testes, o arquivo do banco de dados SQLite já está incluso no repositório com dados pré-cadastrados. Você pode usar as credenciais abaixo na rota `POST api/auth/login` para gerar um token imediatamente, sem precisar criar uma conta do zero:
 
-| Perfil            | Email             | Senha      |
-|-------------------|-------------------|------------|
-| **Administrador** | admin@email.com   | admin123   |
-| **Cliente Padrão**| cliente@email.com | cliente123 |
+| Perfil            | Email                      | Senha      |
+|-------------------|----------------------------|------------|
+| **Administrador** | gustavo.falcao@gmail.com   | Gustavo123 |
+| **Administrador** | lucas.silva.1@exemplo.com  | Teste001A9 |
+| **Cliente Padrão**| mariana.santos.2@exemplo.com  | Teste002A9 |
 
 ### Como acessar as rotas protegidas:
-1. Crie um novo usuário na rota `POST /user`.
-2. Faça o login na rota `POST /login` com as credenciais criadas. O corpo da resposta retornará um token.
-3. Copie este token.
-4. Caso esteja usando ferramentas como Postman ou Insomnia, envie o token no cabeçalho da requisição como `Bearer Token`.
+1. Faça o login na rota `POST api/auth/login` utilizando uma das credenciais de teste acima. O corpo da resposta retornará um token.
+2. Copie este token.
+3. Caso esteja usando Postman ou Insomnia, envie o token no cabeçalho da requisição como `Bearer Token`.
 
 ---
 
